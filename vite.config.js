@@ -11,6 +11,7 @@ export default defineConfig({
     targets: [
       { src: 'src/assets/admin', dest: 'assets' },
       { src: 'src/assets/frontend', dest: 'assets' },
+      { src: 'src/assets/leetu-shop.svg', dest: 'assets' },
     ],
   }),
   ],
