@@ -1,0 +1,21 @@
+version: "3.3"
+
+services:
+  frontend_services:
+    container_name: frontend-nginx-react-services
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env
+    ports:
+      - $NGINX_PORT:$NGINX_PORT
+    environment:
+      - NGINX_PORT=$NGINX_PORT
+    volumes:
+      # - ./nginx_templates/default.conf.template:/etc/nginx/templates/default.conf.template
+      - ./nginx_templates/default.conf.template:/etc/nginx/conf.d/default.conf
+    # command: /bin/sh -c "envsubst < /etc/nginx/templates/default.conf.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+    command: /bin/sh -c "nginx -g 'daemon off;'"
+
+# tham khao : https://www.bezkoder.com/docker-compose-spring-boot-mysql/

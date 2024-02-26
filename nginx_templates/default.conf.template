@@ -1,0 +1,16 @@
+server {
+    listen       ${NGINX_PORT};
+    listen       [::]:${NGINX_PORT};
+
+    
+    root   /usr/share/nginx/html;
+    index  index.html;
+
+    location / {
+        try_files $uri $uri/ @rewrites;
+    }
+
+    location @rewrites {
+        rewrite ^(.+)$ /index.html last;
+    }
+}
