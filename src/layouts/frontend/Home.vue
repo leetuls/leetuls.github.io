@@ -34,7 +34,6 @@ export default defineComponent({
         const appleTouchIcon = '/assets/frontend/images/ico/apple-touch-icon-57-precomposed.png';
 
         const scriptTag = [
-            '/assets/frontend/js/jquery.js',
             '/assets/frontend/js/price-range.js',
             '/assets/frontend/js/jquery.scrollUp.min.js',
             '/assets/frontend/js/bootstrap.min.js',
