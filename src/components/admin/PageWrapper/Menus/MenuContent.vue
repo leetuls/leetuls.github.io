@@ -22,8 +22,7 @@
         <CategoryForm ref="menuRef" :options="options" messageError="" :error="false" labelName="Tên menu"
             labelParent="Menu cha" />
     </a-modal>
-    <a-table :columns="columns" :data-source="dataSource" :row-selection="rowSelection" :loading="isLoading"
-        :pagination="{ pageSize: 7 }">
+    <a-table :columns="columns" :data-source="dataSource" :row-selection="rowSelection" :loading="isLoading">
         <!-- Search -->
 
         <template #customFilterDropdown="{ setSelectedKeys, selectedKeys, confirm, clearFilters, column }">

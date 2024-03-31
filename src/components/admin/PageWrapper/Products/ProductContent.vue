@@ -1,6 +1,6 @@
 <template>
     <a-button style="margin-bottom: 8px">Thêm</a-button>
-    <a-table :columns="columns" :data-source="dataSource" bordered :loading="isLoading">
+    <a-table :columns="columns" :data-source="dataSource" bordered :loading="isLoading" :scroll="{ x: 1800, y: 1200 }">
         <!-- Search -->
         <template #customFilterDropdown="{ setSelectedKeys, selectedKeys, confirm, clearFilters, column }">
             <div style="padding: 8px">
@@ -150,6 +150,12 @@ const fetchData = async () => {
 
 const columns = [
     {
+        title: 'Thao tác',
+        dataIndex: 'operation',
+        fixed: 'left',
+        width: '8%'
+    },
+    {
         title: 'Mã sản phẩm',
         dataIndex: 'product_id',
         width: '8%',
@@ -164,6 +170,7 @@ const columns = [
         },
         sorter: (a, b) => a.product_id.localeCompare(b.product_id),
         sortDirections: ['descend', 'ascend'],
+        fixed: 'left'
     },
     {
         title: 'Tên sản phẩm',
@@ -180,6 +187,7 @@ const columns = [
         },
         sorter: (a, b) => a.name.localeCompare(b.name),
         sortDirections: ['descend', 'ascend'],
+        fixed: 'left'
     },
     {
         title: 'Giá sản phẩm',
@@ -221,11 +229,7 @@ const columns = [
         title: 'Hình ảnh chi tiết',
         dataIndex: 'detail_images',
         width: '20%'
-    },
-    {
-        title: 'Thao tác',
-        dataIndex: 'operation',
-    },
+    }
 ];
 
 // Inline Edit

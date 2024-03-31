@@ -7,7 +7,7 @@
         <CategoryForm ref="categoryRef" :options="options" :messageError="messageAddedFailed" :error="isAddedFailed"
             labelName="Tên danh mục" labelParent="Danh mục cha" />
     </a-modal>
-    <a-table :columns="columns" :data-source="dataSource" bordered :pagination="{ pageSize: 7 }" :loading="isLoading">
+    <a-table :columns="columns" :data-source="dataSource" bordered :loading="isLoading">
         <!-- Search -->
         <template #customFilterDropdown="{ setSelectedKeys, selectedKeys, confirm, clearFilters, column }">
             <div style="padding: 8px">
