@@ -3,7 +3,8 @@ export const routerData = {
     'page_admin': [
         '/admin', '/admin/',
         '/admin/category-list', '/admin/category-list/',
-        '/admin/menu-list', '/admin/menu-list/'
+        '/admin/menu-list', '/admin/menu-list/',
+        '/admin/product-list', '/admin/product-list/'
     ],
     'page_login': ['/login-admin', '/login-admin/']
 };

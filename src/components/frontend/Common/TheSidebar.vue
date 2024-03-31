@@ -140,3 +140,8 @@
         </div>
     </div>
 </template>
+
+<script setup>
+import '@/assets/frontend/js/price-range.js';
+import '@/assets/frontend/css/price-range.css';
+</script>

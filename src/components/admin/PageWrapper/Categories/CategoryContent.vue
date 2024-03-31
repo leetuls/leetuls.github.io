@@ -27,21 +27,25 @@
                 </a-button>
             </div>
         </template>
+
         <template #customFilterIcon="{ filtered }">
             <search-outlined :style="{ color: filtered ? '#108ee9' : undefined }" />
         </template>
         <!-- End Search -->
+
         <template #bodyCell="{ column, text, record }">
             <template v-if="['parent_id'].includes(column.dataIndex)">
                 <div>
-                    <CategoryViewModel v-if="editableData[record.id]" :options="options" @select="validateModel(record.id)"
-                        v-model:value="editableData[record.id][column.dataIndex]" @keyup.enter="save(record.id)">
+                    <CategoryViewModel v-if="editableData[record.id]" :options="options"
+                        @select="validateModel(record.id)" v-model:value="editableData[record.id][column.dataIndex]"
+                        @keyup.enter="save(record.id)">
                     </CategoryViewModel>
                     <template v-else>
                         {{ categoryCombine[text] }}
                     </template>
                 </div>
             </template>
+
             <template v-if="['name'].includes(column.dataIndex)">
                 <div>
                     <a-input v-if="editableData[record.id]" v-model:value="editableData[record.id][column.dataIndex]"
@@ -51,6 +55,7 @@
                     </template>
                 </div>
             </template>
+
             <template v-if="column.dataIndex === 'operation'">
                 <div class="editable-row-operations">
                     <span v-if="editableData[record.id]">
@@ -316,7 +321,7 @@ onBeforeMount(async () => {
     document.addEventListener('keydown', handleKeyDown);
 });
 </script>
-  
+
 <style scoped>
 .editable-row-operations a {
     margin-right: 8px;

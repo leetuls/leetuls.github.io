@@ -139,6 +139,7 @@ const login = async () => {
     switch (responseData.status) {
         case 200:
             let sessionData = {
+                'user_id': responseData.user.user_id,
                 'username': responseData.user.name,
                 'token': responseData.authorisation.token
             }

@@ -107,5 +107,20 @@ export const Common = {
 
         processArray(inputArray);
         return Array.from(uniqueKeySet);
-    }
+    },
+    filterObjectsByKeys: (array, keysToRemove) => {
+        return array.map(item => {
+            // Nếu item có thuộc tính 'children', thực hiện đệ quy trên mảng con
+            if (item.children) {
+                item.children = Common.filterObjectsByKeys(item.children, keysToRemove);
+                // Nếu 'children' rỗng sau khi đệ quy, xóa thuộc tính 'children'
+                if (item.children.length === 0) {
+                    delete item.children;
+                }
+            }
+
+            // Lọc bỏ item nếu key nằm trong mảng keysToRemove
+            return keysToRemove.includes(item.key) ? null : item;
+        }).filter(item => item !== null);
+    },
 }

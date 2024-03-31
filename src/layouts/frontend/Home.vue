@@ -17,7 +17,6 @@ export default defineComponent({
             '/assets/frontend/css/bootstrap.min.css',
             '/assets/frontend/css/font-awesome.min.css',
             '/assets/frontend/css/prettyPhoto.css',
-            '/assets/frontend/css/price-range.css',
             '/assets/frontend/css/animate.css',
             '/assets/frontend/css/main.css',
             '/assets/frontend/css/responsive.css',
@@ -34,8 +33,6 @@ export default defineComponent({
         const appleTouchIcon = '/assets/frontend/images/ico/apple-touch-icon-57-precomposed.png';
 
         const scriptTag = [
-            '/assets/frontend/js/jquery.js',
-            '/assets/frontend/js/price-range.js',
             '/assets/frontend/js/jquery.scrollUp.min.js',
             '/assets/frontend/js/bootstrap.min.js',
             '/assets/frontend/js/jquery.prettyPhoto.js',
