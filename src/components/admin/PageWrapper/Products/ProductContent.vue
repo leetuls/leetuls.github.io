@@ -86,8 +86,8 @@
                         </a>
                     </span>
                     <span v-else>
-                        <span>&nbsp;</span>
                         <a @click="edit(record.product_id)">Edit</a>
+                        <span>&nbsp;</span>
                         <a-popconfirm v-if="dataSource.length" title="Sure to delete?"
                             @confirm="onDelete(record.product_id)">
                             <a>Delete</a>
