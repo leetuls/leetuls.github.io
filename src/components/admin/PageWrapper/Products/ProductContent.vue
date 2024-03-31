@@ -1,6 +1,7 @@
 <template>
     <a-button style="margin-bottom: 8px">Thêm</a-button>
-    <a-table :columns="columns" :data-source="dataSource" bordered :loading="isLoading" :scroll="{ x: 1800, y: 1200 }">
+    <a-table :columns="columns" :data-source="dataSource" bordered :loading="isLoading" :scroll="{ x: 1800, y: 375 }"
+        :pagination="{ position: ['topRight'] }">
         <!-- Search -->
         <template #customFilterDropdown="{ setSelectedKeys, selectedKeys, confirm, clearFilters, column }">
             <div style="padding: 8px">
