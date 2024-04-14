@@ -1,6 +1,7 @@
 <template>
     <a-button style="margin-bottom: 8px">Thêm</a-button>
-    <a-table :columns="columns" :data-source="dataSource" bordered :loading="isLoading" :scroll="{ x: 1800, y: 375 }"
+    <a-table :columns="columns" :data-source="dataSource" bordered :loading="isLoading"
+        :scroll="{ x: 1800, y: getInnerHeight() - 325 }"
         :pagination="{ position: ['topRight'] }">
         <!-- Search -->
         <template #customFilterDropdown="{ setSelectedKeys, selectedKeys, confirm, clearFilters, column }">
@@ -329,6 +330,12 @@ const handleKeyDown = (event) => {
         }
     }
 }
+
+// get innerHeight
+const getInnerHeight = () => {
+    return parseInt(window.innerHeight);
+}
+//end get innerHeight
 
 onMounted(async () => {
     isLoading.value = true;

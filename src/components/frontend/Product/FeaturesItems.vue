@@ -162,3 +162,7 @@
 
     </div><!--features_items-->
 </template>
+
+<script setup>
+import "@/assets/frontend/js/jquery.scrollUp.min.js";
+</script>
