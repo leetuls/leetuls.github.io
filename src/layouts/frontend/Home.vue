@@ -8,6 +8,7 @@
 import { defineComponent, onBeforeMount } from "vue";
 import TheHeader from "@/components/frontend/Common/TheHeader.vue";
 import TheFooter from "@/components/frontend/Common/TheFooter.vue";
+import "@/assets/frontend/js/jquery.js";
 
 export default defineComponent({
     components: { TheHeader, TheFooter },
